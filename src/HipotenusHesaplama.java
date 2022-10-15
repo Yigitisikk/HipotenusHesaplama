@@ -4,7 +4,7 @@ public class HipotenusHesaplama {
     public static void main(String[] args) {
 
         int a, b;
-        double c;
+        double c, cevre, alan;
         Scanner girdi = new Scanner(System.in);
 
         System.out.print("1. Kenarı Griniz : ");
@@ -14,6 +14,12 @@ public class HipotenusHesaplama {
         b = girdi.nextInt();
 
         c = Math.sqrt((a*a) + (b*b));
-        System.out.print("Hipotenüs : "+ c);
+        System.out.println("Hipotenüs : "+ c);
+
+        cevre = a + b + c;
+        System.out.println("Üçgenin Çevresi : "+ cevre);
+
+        alan = Math.sqrt((cevre/2)*(cevre/2-a)*(cevre/2-b)*(cevre/2-c));
+        System.out.println("Üçgenin Alanı : "+ alan);
     }
 }
